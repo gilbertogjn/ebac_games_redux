@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
 import { Game } from '../../App'
 
@@ -17,7 +17,7 @@ const carrinhoSlice = createSlice({
     adicionar: (state, action: PayloadAction<Game>) => {
       const jogo = action.payload
 
-      if (state.itens.find(game => game.id === jogo.id)) {
+      if (state.itens.find((game) => game.id === jogo.id)) {
         alert('Item já adicionado')
       } else {
         state.itens.push(jogo)
